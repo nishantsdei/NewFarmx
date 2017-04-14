@@ -1,10 +1,10 @@
 {
   "name": "efarm",
   "version": "0.0.0",
-  "license": "MIT",
+  "license": "",
   "scripts": {
     "ng": "ng",
-    "start":  "concurrently \"ng serve\" \"node app.js\"",
+    "start": "concurrently \"ng serve\" \"node app.js\"",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,9 +21,8 @@
     "@angular/platform-browser": "^2.4.0",
     "@angular/platform-browser-dynamic": "^2.4.0",
     "@angular/router": "^3.4.0",
+    "concurrently": "^3.4.0",
     "core-js": "^2.4.1",
-    "rxjs": "^5.1.0",
-    "zone.js": "^0.7.6",
     "ejs": "2.3.4",
     "grunt": "1.0.1",
     "grunt-contrib-clean": "1.0.0",
@@ -38,10 +37,13 @@
     "grunt-sails-linker": "~0.10.1",
     "grunt-sync": "0.5.2",
     "include-all": "^1.0.0",
+    "moment": "^2.18.1",
+    "ng2-bootstrap": "^1.6.3",
     "rc": "1.0.1",
+    "rxjs": "^5.1.0",
     "sails": "~0.12.13",
     "sails-disk": "~0.10.9",
-    "concurrently": "^3.4.0"
+    "zone.js": "^0.7.6"
   },
   "devDependencies": {
     "@angular/cli": "1.0.0-rc.2",
@@ -67,6 +69,5 @@
     "type": "git",
     "url": "git://github.com/nishantk/test-app.git"
   },
-  "author": "nishantk",
-  "license": ""
+  "author": "nishantk"
 }

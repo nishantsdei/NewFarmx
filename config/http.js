@@ -30,23 +30,25 @@ module.exports.http = {
   *                                                                          *
   ***************************************************************************/
 
-    // order: [
-    //   'startRequestTimer',
-    //   'cookieParser',
-    //   'session',
-    //   'myRequestLogger',
-    //   'bodyParser',
-    //   'handleBodyParserError',
-    //   'compress',
-    //   'methodOverride',
-    //   'poweredBy',
-    //   '$custom',
-    //   'router',
-    //   'www',
-    //   'favicon',
-    //   '404',
-    //   '500'
-    // ],
+    order: [
+        'startRequestTimer',
+        'cookieParser',
+        'session',
+        'myRequestLogger',
+        'bodyParser',
+        'handleBodyParserError',
+        'compress',
+        'methodOverride',
+        'poweredBy',
+        '$custom',
+        'router',
+        'www',
+        'favicon',
+        '404',
+        '500',
+        'passportInit',
+        'passportSession',
+    ],
 
   /****************************************************************************
   *                                                                           *
@@ -78,6 +80,9 @@ module.exports.http = {
     // bodyParser: require('skipper')({strict: true})
 
   },
+
+  passportInit: require('passport').initialize(),
+  passportSession: require('passport').session(),
 
   /***************************************************************************
   *                                                                          *

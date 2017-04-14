@@ -26,8 +26,22 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  // '*': true,
+  '*': 'OAuthValidateAccessToken',
 
+  OAuthController: {
+    '*' :  'OAuthValidateAccessToken',
+    token: 'OAuthPublicClient'
+  },
+  UsersController: {
+   '*' : 'OAuthValidateAccessToken',
+   'register' : true,
+   'verify/:email' : true
+  },
+  ClientsController: {
+    '*' : 'OAuthValidateAccessToken',
+    'register' : true,
+    'verify/:email' : true
+  }
   /***************************************************************************
   *                                                                          *
   * Here's an example of mapping some policies to run before a controller    *
